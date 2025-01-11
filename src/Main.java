@@ -1,11 +1,12 @@
 import com.google.gson.Gson;
 import com.google.gson.JsonParser;
 
+import java.io.IOException;
 import java.util.Scanner;
 //' https://v6.exchangerate-api.com/v6/077ac129727640d9768f99ff/latest/USD
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, InterruptedException {
         Scanner leitura = new Scanner(System.in);
         int opcao = 0;
         while (opcao != 7) {

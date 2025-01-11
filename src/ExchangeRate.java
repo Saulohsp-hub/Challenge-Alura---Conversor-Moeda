@@ -1,4 +1,4 @@
-/*import com.google.gson.Gson;
+import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
 import java.io.IOException;
@@ -10,10 +10,11 @@ import java.net.http.HttpResponse;
 
 public class ExchangeRate {
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public double conversorMoeda(String endereco) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
+
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://v6.exchangerate-api.com/v6/077ac129727640d9768f99ff/pair/USD/BRL"))
+                .uri(URI.create(endereco))
                 .build();
         HttpResponse<String> response = client
                 .send(request, HttpResponse.BodyHandlers.ofString());
@@ -23,7 +24,8 @@ public class ExchangeRate {
 
         double taxaConversao = jsonObject.get("conversion_rate").getAsDouble();
 
-        System.out.println("a taxa de conversao é de " + taxaConversao);//extrai o valor da taxa de conversao
+        //System.out.println("a taxa de conversao é de " + taxaConversao);//extrai o valor da taxa de conversao
+        return taxaConversao;
     }
 }
-*/
+
