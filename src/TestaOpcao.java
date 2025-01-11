@@ -12,8 +12,6 @@ public class TestaOpcao {
                 parConversao = "USD/ARS";
                 System.out.println("Digite o valor a ser convertido");
                 numero = valor.nextDouble();
-                ConversorMoedas conv = new ConversorMoedas();
-
 
                 break;
             case 2:

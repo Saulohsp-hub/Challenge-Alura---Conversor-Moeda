@@ -23,7 +23,7 @@ public class ConversorMoedas {
     public ConversorMoedas() throws IOException, InterruptedException {
 
 
-        public void testeDefinitivo(){
+
         Gson gson = new GsonBuilder()
                 .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE) // Define a política de nomeação de campos como CamelCase
                 .setPrettyPrinting() // Configura o Gson para imprimir o JSON de forma legível
@@ -47,8 +47,8 @@ public class ConversorMoedas {
             System.out.println("taxa de conversao é " + taxaConversao);
         }
     }
-}
-}
+
+
 
 
 
